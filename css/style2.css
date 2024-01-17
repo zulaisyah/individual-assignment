@@ -1,0 +1,105 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  nav{
+    display: flex;
+    width: 84%;
+    margin:none;
+    padding: 30px 100px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .logo::first-letter{
+    font-size: 40px;
+    border: 2px solid blue;
+    border-right: transparent;
+    padding-left: 5px;
+    color: black;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    position: 5px 0;
+  
+  }
+  
+  nav ul a:hover{
+    color: red;
+  }
+  
+  nav ul li a::after{
+    content:"";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    position: absolute;
+    height: 3px;
+    background: #c51f1f;
+    transition: .3s;
+  }
+
+  BIODATA
+
+  .custom-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  .custom-table caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .custom-table td {
+    padding: 8px;
+    border-bottom: 1px solid #000000;
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #eeb094;
+  }
+  
+  
+  
+  .table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  .table caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .table td {
+    padding: 8px;
+    border-bottom: 1px solid #000000;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #92592a;
+  }
+  
+  
+ 

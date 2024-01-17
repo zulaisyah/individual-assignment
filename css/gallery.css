@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  nav{
+    display: flex;
+    width: 84%;
+    margin:none;
+    padding: 30px 100px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .logo::first-letter{
+    font-size: 40px;
+    border: 2px solid blue;
+    border-right: transparent;
+    padding-left: 5px;
+    color: black;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    position: 5px 0;
+  }
+  
+  nav ul a:hover{
+    color: red;
+  }
+  
+  nav ul li a::after{
+    content:"";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    position: absolute;
+    height: 3px;
+    background: #c51f1f;
+    transition: .3s;
+  }
+
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  .gallery {
+    place-items: center;
+    --size: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, var(--size));
+    grid-auto-rows: var(--size);
+    margin-bottom: var(--size);
+    place-items: start center;
+    gap: 5px;
+    
+    &:has(:hover) img:not(:hover),
+    &:has(:focus) img:not(:focus){
+      filter: brightness(0.5) contrast(0.5);
+    }
+  
+    & img {
+      object-fit: cover;
+      width: calc(var(--size) * 2);
+      height: calc(var(--size) * 2);
+      clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z");
+      transition: clip-path 0.25s, filter 0.75s;
+      grid-column: auto / span 2;
+      border-radius: 5px;
+  
+      &:nth-child(5n - 1) { 
+        grid-column: 2 / span 2 
+      }
+  
+      &:hover,
+      &:focus {
+        clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
+        z-index: 1;
+        transition: clip-path 0.25s, filter 0.25s;
+      }
+      
+      &:focus {
+        outline: 1px dashed black;
+        outline-offset: -5px;
+      }
+    }
+  }
+
+
+  .video-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px; 
+}
+
+video {
+    width: 48%; 
+}
+
+.custom-box {
+  border: 5px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  direction: rtl; 
+}
